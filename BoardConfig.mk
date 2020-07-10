@@ -76,7 +76,6 @@ TW_USE_TOOLBOX := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_SCREEN_BLANK_ON_BOOT := true
 
 #Ignore Missing Dependencies
