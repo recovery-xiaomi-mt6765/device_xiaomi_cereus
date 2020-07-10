@@ -76,7 +76,6 @@ TW_USE_TOOLBOX := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 TW_SCREEN_BLANK_ON_BOOT := true
 
 #Ignore Missing Dependencies
@@ -95,12 +94,7 @@ SHRP_EXTERNAL := /external_sd
 SHRP_INTERNAL := /sdcard
 SHRP_OTG := /usb_otg
 # Put 0 to disable flashlight
-SHRP_FLASH := 1
-# These are led paths, find yours then put here (Optional)
-SHRP_CUSTOM_FLASHLIGHT := false
-SHRP_FONP_1 := /sys/class/leds/lcd-backlight:torch_0/brightness
-SHRP_FONP_2 := /sys/class/leds/lcd-backlight:torch_1/brightness
-SHRP_FONP_3 := /sys/class/leds/lcd-backlight:switch/brightness
+SHRP_FLASH := 0
 # Max Brightness of LED (Optional)
 SHRP_FLASH_MAX_BRIGHTNESS := 200
 # Check your device's recovery path, dont use blindly
