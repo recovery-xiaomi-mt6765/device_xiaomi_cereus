@@ -8,4 +8,4 @@
 6) . build/envsetup.sh
 7) lunch omni_cereus-eng
 8) mka recoveryimage
-### Out file twrp/out/target/protuct/cereus/recovey.img
+### Out file twrp/out/target/product/cereus/recovey.img
