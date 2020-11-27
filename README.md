@@ -1,9 +1,9 @@
 # device_xiaomi_cereus
 ## How to build TWRP from official repo?
-1) mkdir twrp && cd twrp
-2) repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+1) mkdir of && cd of
+2) repo init -u repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 3) repo sync
-4) git clone https://github.com/recovery-xiaomi-mt6765/device_xiaomi_cereus -b master device/xiaomi/cereus
+4) git clone https://github.com/recovery-xiaomi-mt6765/device_xiaomi_cereus -b orangefox-pie  device/xiaomi/cereus
 5) export ALLOW_MISSING_DEPENDENCIES=true
 6) . build/envsetup.sh
 7) lunch omni_cereus-eng
