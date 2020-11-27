@@ -1,5 +1,5 @@
 # device_xiaomi_cereus
-## How to build TWRP from official repo?
+## How to build OrangeFox from official repo?
 1) mkdir of && cd of
 2) repo init -u repo init -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 3) repo sync
