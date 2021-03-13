@@ -24,8 +24,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
 	export OF_USE_MAGISKBOOT=1
 	export OF_AB_DEVICE=0
+	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+	export FOX_DISABLE_APP_MANAGER=1
+	export FOX_DELETE_AROMAFM=1
+	export OF_MAINTAINER=MegaFon929
 	add_lunch_combo omni_"$FDEVICE"-eng
 	add_lunch_combo omni_"$FDEVICE"-userdebug
-	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 fi
 #
