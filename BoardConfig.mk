@@ -1,5 +1,5 @@
 #
-# Copyright 2017 The Android Open Source Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,15 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-DEVICE_PATH := device/xiaomi/cereus
 
-# OTA Assert
-TARGET_OTA_ASSERT_DEVICE := cereus
+DEVICE_PATH := device/xiaomi/cereus
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
 TARGET_BOOTLOADER_BOARD_NAME := mt6765
 TARGET_NO_BOOTLOADER := true
+
+# Resolution
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1440
 
 # Architecture
 TARGET_ARCH := arm
@@ -31,9 +33,6 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
-
-# Board
-TARGET_NO_BOOTLOADER := true
 
 # Debugging
 TARGET_USES_LOGD := true
@@ -64,8 +63,6 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
 # Recovery
 RECOVERY_SDCARD_ON_DATA := true
-
-# Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
@@ -77,43 +74,14 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/twrp.fstab
 TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TW_EXCLUDE_TWRPAPP := true
 TW_SCREEN_BLANK_ON_BOOT := true
+ALLOW_MISSING_DEPENDENCIES := true
 
-#Ignore Missing Dependencies
-ALLOW_MISSING_DEPENDENCIES=true
-
-# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
-# Path of your SHRP Tree
-SHRP_PATH := device/xiaomi/cereus
-# Maintainer name
-SHRP_MAINTAINER := yarpopkov
-# Device codename
+#SHRP
 SHRP_DEVICE_CODE := cereus
-# put this 0 if device has no EDL mode
-SHRP_EDL_MODE := 0
-SHRP_EXTERNAL := /external_sd
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb_otg
-# Put 0 to disable flashlight
-SHRP_FLASH := 0
-# Max Brightness of LED (Optional)
-SHRP_FLASH_MAX_BRIGHTNESS := 200
-# Check your device's recovery path, dont use blindly
-SHRP_REC := /dev/block/bootdevice/by-name/recovery
-# Use this flag only if your device is A/B
-SHRP_AB := true
-# Recovery Type (It can be treble,normal,SAR) [Only for About Section]
-SHRP_REC_TYPE := Treble
-# Recovery Type (It can be A/B or A_only) [Only for About Section]
+SHRP_PATH := device/xiaomi/cereus
+SHRP_MAINTAINER := MegaFon929
 SHRP_DEVICE_TYPE := A/B
-# SHRP Padding Flag (Only for rounded corner devices.)
-SHRP_STATUSBAR_RIGHT_PADDING := 40
-SHRP_STATUSBAR_LEFT_PADDING := 40
-# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
-SHRP_EXPRESS := true
-# SHRP Dark mode, use this flag to have dark theme set by default
-SHRP_DARK := true
-# Force mount system in /system despite SAR policy, useful for maintaining backwards compatibility and/or Samsung devices.
-SHRP_NO_SAR_AUTOMOUNT := true
-# Verity
-BOARD_AVB_ENABLE := true
-
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+SHRP_FLASH := 0
+SHRP_REC_TYPE := Normal
+SHRP_SKIP_DEFAULT_ADDON_4 := true
