@@ -1,11 +1,10 @@
 # device_xiaomi_cereus
 ## How to build TWRP from official repo?
-1) mkdir twrp && cd twrp
-2) repo init -u git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
-3) repo sync
-4) git clone https://github.com/recovery-xiaomi-mt6765/device_xiaomi_cereus -b master device/xiaomi/cereus
-5) export ALLOW_MISSING_DEPENDENCIES=true
-6) . build/envsetup.sh
-7) lunch omni_cereus-eng
-8) mka recoveryimage
+1) mkdir shrp && cd shrp
+2) https://shrp.github.io/#/guide
+3) git clone https://github.com/recovery-xiaomi-mt6765/device_xiaomi_cereus -b SHRP device/xiaomi/cereus
+4) export ALLOW_MISSING_DEPENDENCIES=true
+5) . build/envsetup.sh
+6) lunch omni_cereus-eng
+7) mka recoveryimage
 ### Out file twrp/out/target/product/cereus/recovery.img
