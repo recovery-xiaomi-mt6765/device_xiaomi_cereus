@@ -85,3 +85,6 @@ SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
 SHRP_FLASH := 0
 SHRP_REC_TYPE := Normal
 SHRP_SKIP_DEFAULT_ADDON_4 := true
+SHRP_INTERNAL := /sdcard
+SHRP_EXTERNAL := /external_sd
+SHRP_OTG := /usb_otg
