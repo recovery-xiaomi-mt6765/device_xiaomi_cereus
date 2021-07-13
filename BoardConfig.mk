@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/cactus
+DEVICE_PATH := device/xiaomi/cereus
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6765
