@@ -23,4 +23,3 @@ PRODUCT_NAME := omni_cereus
 PRODUCT_BRAND := xiaomi
 PRODUCT_MODEL := Redmi 6
 PRODUCT_MANUFACTURER := Xiaomi
-
