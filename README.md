@@ -1,10 +1,10 @@
-# device_xiaomi_cactus
+# device_xiaomi_cereus
 ## How to build TWRP from official repo?
-1) mkdir shrp && cd shrp
-2) https://shrp.github.io/#/guide
-3) git clone git clone https://github.com/SHRP-Devices/device_xiaomi_cactus
-4) export ALLOW_MISSING_DEPENDENCIES=true
-5) . build/envsetup.sh
-6) lunch omni_cactus-eng
-7) mka recoveryimage
-### Out file shrp/out/target/product/cactus/recovery.img
+1) mkdir TWR{ && cd TWRP
+3) git clone https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-9.0
+4) git clone https://github.com/TeamWin/android_device_xiaomi_cereus device/xiaomi/cactus
+5) export ALLOW_MISSING_DEPENDENCIES=true
+6) . build/envsetup.sh
+7) lunch omni_cereus-eng
+8) mka recoveryimage
+### Out file TWRP/out/target/product/cactus/recovery.img
